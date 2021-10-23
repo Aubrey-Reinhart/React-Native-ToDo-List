@@ -1,14 +1,20 @@
-import React from 'react';
-import { Provider } from 'react-redux'
-import { ConfigureStore } from './src/redux/configureStore'
-import Main from './src/MainComponent';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-const store = ConfigureStore()
+const Stack = createNativeStackNavigator();
 
-export default function App() {
+const MyStack = () => {
   return (
-    <Provider store={store}>
-      <Main />
-    </Provider>
-  )
-}
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{ title: 'Welcome' }}
+        />
+        <Stack.Screen name="Profile" component={ProfileScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
