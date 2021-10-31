@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, } from "react-native";
 import { MaterialIcons } from '@expo/vector-icons';
 
+//view for entire task item. indexContainer contains the index number for the task and taskContainer contains the task and the delet option
 export default TaskItem = (props) => {
     return (
         <View style={styles.container}>
@@ -11,12 +12,13 @@ export default TaskItem = (props) => {
             <View style={styles.taskContainer}>
                 <Text style={styles.task}>{props.task}</Text>
                 <TouchableOpacity onPress={() => props.deleteTask()}>
-                    <MaterialIcons style={styles.delete} name="delete" size={18} color="#fff"></MaterialIcons>
+                    <MaterialIcons style={styles.delete} name="delete" size={18} color='#fff' />
                 </TouchableOpacity>
             </View>
         </View>
-    )
+    );
 }
+
 
 const styles = StyleSheet.create({
     container: {
