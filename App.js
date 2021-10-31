@@ -1,20 +1,25 @@
-import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import React from 'react';
+import { View, StyleSheet, Text } from 'react-native';
 
-const Stack = createNativeStackNavigator();
-
-const MyStack = () => {
+export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{ title: 'Welcome' }}
-        />
-        <Stack.Screen name="Profile" component={ProfileScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <View style={styles.container}>
+        <Text style={styles.heading}>TODO LIST</Text>
+    </View>
   );
-};
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#1E1A3C',
+  },
+  heading: {
+    color: '#fff',
+    fontSize: 20,
+    fontWeight: '600',
+    marginTop: 30,
+    marginBottom: 10,
+    marginLeft: 20,
+  },
+});
