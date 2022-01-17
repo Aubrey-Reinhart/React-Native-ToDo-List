@@ -2,26 +2,26 @@ import React, {useState} from 'react';
 import { KeyboardAvoidingView, StyleSheet, View, TextInput, TouchableOpacity, } from "react-native";
 import { MaterialIcons } from '@expo/vector-icons'; 
 
-//using one hook to handle input field state. the component accepts a callback function in props which adds the task to the list
 export default TaskInputField = (props) => {
+    {/*using one hook to handle input field state. the component accepts a callback function in props which adds the task to the list*/}
     const [task, setTask] = useState();
 
     const handleAddTask = (value) => {
         props.addTask(value);
         setTask(null);
     }
-
+    
     return (
         <KeyboardAvoidingView 
-        behavior={Platform.OS === "ios" ? "padding" : "height"}
-        style={styles.container}
+            behavior={Platform.OS === "ios" ? "padding" : "height"}
+            style={styles.container}
       >
-        <TextInput style={styles.inputField} value={task} onChangeText={text => setTask(text)} placeholder={'Write a task'} placeholderTextColor={'#fff'}/>
+        {/* <TextInput style={styles.inputField} value={task} onChangeText={text => setTask(text)} placeholder={'Write a task'} placeholderTextColor={'#fff'}/>
         <TouchableOpacity onPress={() => handleAddTask(task)}>
                 <View style={styles.button}>
                     <MaterialIcons name="keyboard-arrow-up" size={24} color="black" />
           </View>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </KeyboardAvoidingView>
     );
 }
@@ -29,7 +29,7 @@ export default TaskInputField = (props) => {
 const styles = StyleSheet.create({
     container: {
         borderColor: '#fff',
-        backgroundColor: '#3E3364',
+        backgroundColor: '#126ca1',
         borderWidth: 1,
         marginHorizontal: 20,
         borderRadius: 12,

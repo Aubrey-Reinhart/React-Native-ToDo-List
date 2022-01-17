@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 20,
     },
     indexContainer: {
-        backgroundColor: '#3E3364',
+        backgroundColor: '#126ca1',
         borderRadius: 12,
         marginRight: 10,
         alignItems: 'center',
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
     },
     taskContainer: {
-        backgroundColor: '#3E3364',
+        backgroundColor: '#126ca1',
         borderRadius: 12,
         flexDirection: 'row',
         justifyContent: 'space-between',
