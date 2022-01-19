@@ -3,27 +3,27 @@ import { KeyboardAvoidingView, StyleSheet, View, TextInput, TouchableOpacity, } 
 import { MaterialIcons } from '@expo/vector-icons'; 
 
 export default TaskInputField = (props) => {
-    {/*using one hook to handle input field state. the component accepts a callback function in props which adds the task to the list*/}
-    const [task, setTask] = useState();
+  {/*using one hook to handle input field state. the component accepts a callback function in props which adds the task to the list*/}
+  const [task, setTask] = useState();
 
-    const handleAddTask = (value) => {
-        props.addTask(value);
-        setTask(null);
-    }
-    
-    return (
-        <KeyboardAvoidingView 
-            behavior={Platform.OS === "ios" ? "padding" : "height"}
-            style={styles.container}
+  const handleAddTask = (value) => {
+      props.addTask(value);
+      setTask(null);
+  }
+  
+  return (
+    <KeyboardAvoidingView 
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
+        style={styles.container}
       >
-        {/* <TextInput style={styles.inputField} value={task} onChangeText={text => setTask(text)} placeholder={'Write a task'} placeholderTextColor={'#fff'}/>
-        <TouchableOpacity onPress={() => handleAddTask(task)}>
-                <View style={styles.button}>
-                    <MaterialIcons name="keyboard-arrow-up" size={24} color="black" />
-          </View>
-        </TouchableOpacity> */}
-      </KeyboardAvoidingView>
-    );
+      <TextInput style={styles.inputField} value={task} onChangeText={text => setTask(text)} placeholder={'Write a task'} placeholderTextColor={'#fff'}/>
+      <TouchableOpacity onPress={() => handleAddTask(task)}>
+              <View style={styles.button}>
+                  <MaterialIcons name="keyboard-arrow-up" size={24} color="black" />
+        </View>
+      </TouchableOpacity>
+    </KeyboardAvoidingView>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -54,3 +54,4 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
 });
+

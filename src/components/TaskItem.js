@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, } from "react-native";
 import { MaterialIcons } from '@expo/vector-icons';
 
-//view for entire task item. indexContainer contains the index number for the task and taskContainer contains the task and the delet option
+//view for entire task item. indexContainer contains the index number for the task and taskContainer contains the task and the delete option
 export default TaskItem = (props) => {
     return (
         <View style={styles.container}>
@@ -19,7 +19,7 @@ export default TaskItem = (props) => {
     );
 }
 
-
+//stylesheets for App
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
